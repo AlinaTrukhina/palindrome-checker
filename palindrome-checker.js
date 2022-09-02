@@ -1,4 +1,5 @@
-function palindrome(str) {
+function palindrome() {
+  let str = prompt("Enter word(s) to be checked");
   const lowerStr = str.toLowerCase(); //convert to lower case
   const replaced = lowerStr.replace(/[^a-z0-9]/gi, ''); //remove everything but letters and numbers
 //	console.log(replaced);
@@ -7,9 +8,11 @@ function palindrome(str) {
     if (replaced[i] === replaced[replaced.length - i - 1]) {
 //      console.log(replaced[i]);
     } else {
+      alert('No');
       return false;
     }
   }
+    alert('Yes');
     return true;
 }
 
